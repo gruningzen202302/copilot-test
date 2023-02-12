@@ -21,3 +21,32 @@
     (println (/ (+ (nth sorted 4) (nth sorted 5)) 2))))
 ;call the function
 (median 5 5 5 5 5 5 5 1 1 1)
+
+;make a function that prints a greeting according for the time of the day
+(defn greeting [hour]
+  (if (<= 0 hour 11)
+    (println "Good morning")
+    (if (<= 12 hour 17)
+      (println "Good afternoon")
+      (if (<= 18 hour 23)
+        (println "Good evening")))))
+;call the function
+(greeting 12)
+
+(greeting 23)
+
+;make a function that outputs the current system hour
+(defn system-hour []
+  (let [hour (java.util.Calendar/getInstance().get(java.util.Calendar/HOUR_OF_DAY))]
+    (println hour)))
+;call the function
+(system-hour )
+
+
+
+
+
+
+
+
+
